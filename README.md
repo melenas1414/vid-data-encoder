@@ -27,7 +27,7 @@ node index.mjs --input <path_to_input_file> --output <output_file_name>
 
 ###Example
 
-bash```
+```bash
 node index.mjs --input example.txt --output output_video
 ```
 This command will read example.txt, encode it into a video named output_video.mp4, and then decode the video into a file named output_video_decoded.bin.
