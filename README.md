@@ -25,33 +25,32 @@ To encode and decode a file, use the following command:
 node index.mjs --input <path_to_input_file> --output <output_file_name>
 ```
 
-###Example
+### Example
 
 ```bash
 node index.mjs --input example.txt --output output_video
 ```
 This command will read example.txt, encode it into a video named output_video.mp4, and then decode the video into a file named output_video_decoded.bin.
 
-##Technical Details
-###Encoding
+## Technical Details
+### Encoding
 
-    `encodeDataToVideo(inputFilePath, outputFileName)`: Reads a file, converts its content to binary, and creates a video from the frames generated with the binary data.
+- `encodeDataToVideo(inputFilePath, outputFileName)`: Reads a file, converts its content to binary, and creates a video from the frames generated with the binary data.
 
-###Decoding
+### Decoding
 
-    `decodeVideoToData(videoFilePath, outputFilePath)`: Reads a video, extracts the binary data from the frames, and saves it to a binary file.
+- `decodeVideoToData(videoFilePath, outputFilePath)`: Reads a video, extracts the binary data from the frames, and saves it to a binary file.
 
-###Utilities
+### Utilities
 
-    `createFrame(binaryData, width, height, frameIndex)`: Creates a black and white frame from the binary data.
-    `createFramesDir(framesDir)`: Creates the directory to store frames if it does not exist.
+- `createFrame(binaryData, width, height, frameIndex)`: Creates a black and white frame from the binary data.
+- `createFramesDir(framesDir)`: Creates the directory to store frames if it does not exist.
 
-##Notes
-    - Ensure ffmpeg and OpenCV are correctly installed on your system.
-    - This project is a proof of concept and may require additional optimizations for production use.
-    Ensure ffmpeg and OpenCV are correctly installed on your system.
-    This project is a proof of concept and may require additional optimizations for production use.
+## Notes
 
-##License
+- Ensure ffmpeg and OpenCV are correctly installed on your system.
+- This project is a proof of concept and may require additional optimizations for production use.
+
+## License
 
 This project is licensed under the GNUv3 License.
